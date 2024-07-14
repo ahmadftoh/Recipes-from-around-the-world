@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Yummy</title>
+</head>
+
+<body class="bg-black ">
+    <div
+        class="loadingspinner position-fixed top-0 start-0 end-0 bottom-0 bg-dark d-flex align-items-center justify-content-center z-1 ">
+        <div class="loader"></div>
+    </div>
+
+    <section class="position-fixed top-0 bottom-0 d-flex z-1" id="side">
+
+
+        <div class="darknav  px-3 bg-secondary">
+            <div class="navtab d-flex flex-column justify-content-around">
+                <div class="linkat">
+                    <ul class="p-0">
+                        <li id="Search" class="list-unstyled py-2 text-white fs-5 fw-light">Search</li>
+                        <li id="Categories" class="list-unstyled py-2 text-white fs-5 fw-light">Categories</li>
+                        <li id="Area" class="list-unstyled py-2 text-white fs-5 fw-light">Area</li>
+                        <li id="Ingrediants" class="list-unstyled py-2 text-white fs-5 fw-light">Ingrediants</li>
+                        <li id="Contacts" class="list-unstyled py-2 text-white fs-5 fw-light">Contacts</li>
+                    </ul>
+                </div>
+                <div class="fotor">
+                    <div class="fotorlinks">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="fotorrights">
+                        <p>Copyright Â© 2019 All Rights
+                            <br>
+                            Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="whiteside" class="d-flex flex-column justify-content-between p-3 text-center bg-white">
+            <img id="navimg" src="imgs/logo.png" alt="logo">
+            <i id="open" class="fa-solid fa-bars"></i>
+            <i id="close" class="fa-solid fa-xmark d-none"></i>
+            <div class="foot d-flex flex-column">
+                <i class="mb-1 fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <main>
+        <section id="dataplace" class="mt-5 pt-3">
+            <div class="container">
+                <div id="cont" class="row mt-1">
+
+                </div>
+            </div>
+        </section>
+        <section class="w-100 vh-100 bg-black searchplace d-none">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex justify-content-around align-items-center mt-5  mb-3 ">
+                        <input type="text" oninput="getMealByName()" class="inputSearch" id="searchByName"
+                            placeholder="searchByName">
+                        <input type="text" oninput="getMealByFirstLetter()" class="inputSearch" id="searchByFirstLetter"
+                            placeholder="searchByFirstLetter">
+                    </div>
+                </div>
+                <div id="searchResault" class="row mt-5">
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="d-none" id="cata">
+            <div class="container">
+                <div id="cataPlcae" class="row mt-5 mb-3">
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="d-none" id="are">
+            <div class="container">
+                <div id="area" class="row mt-5 mb-3">
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="d-none" id="ingred">
+            <div class="container">
+                <div id="ingr" class="row mt-5 mb-3">
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="d-none">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="text" class="form-control" id="enterYourName"
+                                placeholder="enterYourName">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Special characters and numbers not allowed</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="email" class="form-control" id="enterYourEmail"
+                                placeholder="enterYourEmail">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Email not valid *exemple@yyy.zzz</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="text" class="form-control" id="yourMobileNumber"
+                                placeholder="yourMobileNumber">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Enter valid Phone Number</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="number" class="form-control" id="enterYourAge"
+                                placeholder="enterYourAge">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Enter valid age</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="password" class="form-control"
+                                id="enterYourPassword" placeholder="enterYourPassword">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Enter valid password *Minimum eight characters, at least one letter and one number:*</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+
+                        <div class="mb-4">
+
+                            <input oninput="validateInputs(this)" type="password" class="form-control"
+                                id="renterYourPassword" placeholder="renterYourPassword">
+                            <div class="alert alert-danger py-1 mt-2 d-none">
+                                <small>Enter valid repassword</small>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button id="SubmitBtn"  class="btn btn-outline-primary w-50 ms-auto me-auto disabled">Submit</button>
+
+                </div>
+            </div>
+
+
+        </section>
+        <section id="mealDetails">
+
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="js files/jquery-3.7.1.min.js"></script>
+    <script src="js files/bootstrap.bundle.min.js"></script>
+    <script src="js files/index.js"></script>
+</body>
+
+</html>

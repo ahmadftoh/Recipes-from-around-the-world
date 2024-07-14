@@ -1,0 +1,85 @@
+#side{
+    height: 100vh;
+    left: -241px;
+}
+#navimg{
+    width: 45px;
+    height: 45px;
+}
+#whiteside{
+    font-size: 25px;
+    
+}
+.navtab{
+    height: 100vh;
+}
+.linkat{
+    li{
+        top: 300px;
+        cursor: pointer;
+    }
+}
+/* //////////////////////////////////////////////////// */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .item{
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .item:hover .imglayer{
+    transform: translateY(0);
+  }
+  .imglayer{
+    transform: translateY(100%);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
+
+  }
+.inputSearch{
+    &:focus{
+        border: 3px solid #3498db;
+        outline: #3498db;
+        
+    }
+   
+    border-radius: 5px;
+    width: 35%;
+    background-color: transparent;
+    color: white;
+   
+}
+#are i{
+font-size: 4em;
+font-weight: 900;
+color: white;
+}
+#ingred i{
+font-size: 4em;
+font-weight: 900;
+color: white;
+}
+#contacto{
+    margin-top: 20%;
+    padding: 0 20%;
+}
+#whiteside i{
+cursor: pointer;
+}
